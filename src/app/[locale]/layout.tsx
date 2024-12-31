@@ -20,7 +20,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "ARA POS Tagger",
+    title: "ARAPT",
     description: "A  web interface for a deep learning model for Arabic POS tagging",
 };
 
@@ -34,6 +34,10 @@ export default async function LocaleLayout({ children, params: {locale}}: { chil
     const messages = await getMessages();
     return (
         <html lang="en">
+        <head>
+            <title>ARAPT</title>
+            <meta name="apple-mobile-web-app-title" content="ARAPT"/>
+        </head>
         <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
