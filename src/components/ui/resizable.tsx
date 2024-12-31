@@ -42,4 +42,10 @@ const ResizableHandle = ({
   </ResizablePrimitive.PanelResizeHandle>
 )
 
-export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+const CustomHandleResize = ({classname} : {classname?: string}) => {
+  return (
+      <ResizableHandle className={cn("border-dashed bg-transparent border-2 hover:border-4 hover:border-primary", classname)}/>
+  )
+}
+
+export { ResizablePanelGroup, ResizablePanel, ResizableHandle, CustomHandleResize }
