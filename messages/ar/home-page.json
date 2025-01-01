@@ -22,6 +22,7 @@
         },
         "action": {
           "download": "تنزيل",
+          "downloading": "جار التنزيل...",
           "cancel": "إلغاء"
         }
       },
@@ -44,7 +45,8 @@
       "settings-zone": {
         "model-select": "اختر النموذج الذي ترغب في استخدامه",
         "action": {
-          "analyze": "تحليل"
+          "analyze": "تحليل",
+          "analyzing": "جار التحليل..."
         }
       },
       "output-zone": {

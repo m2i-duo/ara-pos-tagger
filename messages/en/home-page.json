@@ -22,6 +22,7 @@
         },
         "action": {
           "download": "Download",
+          "downloading": "Downloading...",
           "cancel": "Cancel"
         }
       },
@@ -44,7 +45,8 @@
       "settings-zone": {
         "model-select": "Select the model you wish to use",
         "action": {
-          "analyze": "Analyze"
+          "analyze": "Analyze",
+          "analyzing": "Analyzing..."
         }
       },
       "output-zone": {

@@ -16,7 +16,7 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compon
 import React from "react";
 import {DownloadItem, SaveFormat} from "@/lib/types";
 import {usePosTagger} from "@/context/pos-tagger-context";
-import {cn} from "@/lib/utils";
+import {cn, createCsvFile, createJsonFile, createXmlFile, downloadFile} from "@/lib/utils";
 import {useTranslations} from "next-intl";
 
 const downloadItems: DownloadItem[] = [
@@ -41,7 +41,25 @@ const downloadItems: DownloadItem[] = [
 ]
 export function DownloadMenu() {
     const t = useTranslations("main.top-menu.download");
-    const {saveFormat, setSaveFormat, taggedOutput} = usePosTagger()
+    const {saveFormat, setSaveFormat, taggedOutput, downloading, setDownloading} = usePosTagger()
+    const handleDownload = async() => {
+        setDownloading(true)
+        // download tagged output in saveFormat
+        let blob: Blob = new Blob()
+        switch (saveFormat) {
+            case "csv":
+                blob = createCsvFile(taggedOutput)
+                break
+            case "json":
+                blob = createJsonFile(taggedOutput)
+                break
+            case "xml":
+                blob = createXmlFile(taggedOutput)
+                break
+        }
+        downloadFile(blob, `tagged_output.${saveFormat}`)
+        setDownloading(false)
+    }
     return (
         <Dialog >
             {
@@ -89,7 +107,7 @@ export function DownloadMenu() {
                     }
                 </ToggleGroup>
                 <DialogFooter>
-                    <Button type="submit">{t("action.download")}</Button>
+                    <Button type="submit" onClick={handleDownload} disabled={downloading}>{downloading ? t("action.downloading"): t("action.download")}</Button>
                 </DialogFooter>
             </DialogContent>
         </Dialog>

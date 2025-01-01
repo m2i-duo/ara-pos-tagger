@@ -1,162 +1,23 @@
+"use client"
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
-    TableFooter,
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table"
-import {useTranslations} from "next-intl";
-
-const sentence = [
-    {
-        word: "المنظمة",
-        arabicTag: "صفة معرفة",
-        englishTag: "Definite adjective",
-        frenchTag: "Adjectif défini",
-        tagAbbreviation: "Sifa"
-    },
-    {
-        word: "العالمية",
-        arabicTag: "صفة معرفة",
-        englishTag: "Definite adjective",
-        frenchTag: "Adjectif défini",
-        tagAbbreviation: "Sifa"
-    },
-    {
-        word: "للصحة",
-        arabicTag: "جار ومجرور",
-        englishTag: "Genitive",
-        frenchTag: "Génitif",
-        tagAbbreviation: "Jar wa majrur"
-    },
-    {
-        word: "WHO",
-        arabicTag: "اختصار",
-        englishTag: "Abbreviation",
-        frenchTag: "Abréviation",
-        tagAbbreviation: "Iktisar"
-    },
-    {
-        word: "هي",
-        arabicTag: "ضمير متصل",
-        englishTag: "Attached pronoun",
-        frenchTag: "Pronom attaché",
-        tagAbbreviation: "Dameer muttasil"
-    },
-    {
-        word: "وكالة",
-        arabicTag: "اسم",
-        englishTag: "Noun",
-        frenchTag: "Nom",
-        tagAbbreviation: "Ism"
-    },
-    {
-        word: "الصحة",
-        arabicTag: "اسم",
-        englishTag: "Noun",
-        frenchTag: "Nom",
-        tagAbbreviation: "Ism"
-    },
-    {
-        word: "العالمية",
-        arabicTag: "صفة معرفة",
-        englishTag: "Definite adjective",
-        frenchTag: "Adjectif défini",
-        tagAbbreviation: "Sifa"
-    },
-    {
-        word: "WHO",
-        arabicTag: "اختصار",
-        englishTag: "Abbreviation",
-        frenchTag: "Abréviation",
-        tagAbbreviation: "Iktisar"
-    },
-    {
-        word: "هي",
-        arabicTag: "ضمير متصل",
-        englishTag: "Attached pronoun",
-        frenchTag: "Pronom attaché",
-        tagAbbreviation: "Dameer muttasil"
-    },
-    {
-        word: "وكالة",
-        arabicTag: "اسم",
-        englishTag: "Noun",
-        frenchTag: "Nom",
-        tagAbbreviation: "Ism"
-    },
-    {
-        word: "الصحة",
-        arabicTag: "اسم",
-        englishTag: "Noun",
-        frenchTag: "Nom",
-        tagAbbreviation: "Ism"
-    },
-    {
-        word: "العالمية",
-        arabicTag: "صفة معرفة",
-        englishTag: "Definite adjective",
-        frenchTag: "Adjectif défini",
-        tagAbbreviation: "Sifa"
-    },
-    {
-        word: "WHO",
-        arabicTag: "اختصار",
-        englishTag: "Abbreviation",
-        frenchTag: "Abréviation",
-        tagAbbreviation: "Iktisar"
-    },
-    {
-        word: "هي",
-        arabicTag: "ضمير متصل",
-        englishTag: "Attached pronoun",
-        frenchTag: "Pronom attaché",
-        tagAbbreviation: "Dameer muttasil"
-    },
-    {
-        word: "وكالة",
-        arabicTag: "اسم",
-        englishTag: "Noun",
-        frenchTag: "Nom",
-        tagAbbreviation: "Ism"
-    },
-    {
-        word: "الصحة",
-        arabicTag: "اسم",
-        englishTag: "Noun",
-        frenchTag: "Nom",
-        tagAbbreviation: "Ism"
-    },
-    {
-        word: "العالمية",
-        arabicTag: "صفة معرفة",
-        englishTag: "Definite adjective",
-        frenchTag: "Adjectif défini",
-        tagAbbreviation: "Sifa"
-    },
-    {
-        word: "WHO",
-        arabicTag: "اختصار",
-        englishTag: "Abbreviation",
-        frenchTag: "Abréviation",
-        tagAbbreviation: "Iktisar"
-    },
-    {
-        word: "هي",
-        arabicTag: "ضمير متصل",
-        englishTag: "Attached pronoun",
-        frenchTag: "Pronom attaché",
-        tagAbbreviation: "Dameer muttasil"
-    }
-]
+} from "@/components/ui/table";
+import { useTranslations } from "next-intl";
+import { usePosTagger } from "@/context/pos-tagger-context";
+import { Skeleton } from "@/components/ui/skeleton";
+import {useEffect} from "react";
 
 export function OutputTable() {
     const t = useTranslations("main.main-box.output-zone.table");
+    const { taggedOutput, loading } = usePosTagger();
     return (
-        <Table style={{direction: "rtl"}}>
+        loading ? <OutputTableSkeleton /> :
+        <Table style={{ direction: "rtl" }}>
             <TableHeader>
                 <TableRow>
                     <TableHead className={"text-start"}>{t("header.word")}</TableHead>
@@ -167,16 +28,43 @@ export function OutputTable() {
                 </TableRow>
             </TableHeader>
             <TableBody>
-                {sentence.map((word, idx) => (
+                {taggedOutput?.map((word, idx) => (
                     <TableRow key={idx}>
                         <TableCell className="text-start font-medium">{word.word}</TableCell>
                         <TableCell className={"text-start"}>{word.arabicTag}</TableCell>
                         <TableCell className={"text-start"}>{word.englishTag}</TableCell>
                         <TableCell className={"text-start"}>{word.frenchTag}</TableCell>
-                        <TableCell className="text-end">{word.tagAbbreviation}</TableCell>
+                        <TableCell className="text-end">{word.abbreviationTag}</TableCell>
                     </TableRow>
                 ))}
             </TableBody>
         </Table>
-    )
+    );
+}
+
+const OutputTableSkeleton = () => {
+    return (
+        <Table>
+            <TableHeader>
+                <TableRow>
+                    {Array.from({length: 5}).map((_, idx) => (
+                        <TableHead key={idx}>
+                            <Skeleton className={"w-full h-full"} />
+                        </TableHead>
+                    ))}
+                </TableRow>
+            </TableHeader>
+            <TableBody>
+                {Array.from({length: 10}).map((_, idx) => (
+                    <TableRow key={idx}>
+                        {Array.from({length: 5}).map((_, idx) => (
+                            <TableCell key={idx}>
+                                <Skeleton className={"w-full h-12"} />
+                            </TableCell>
+                        ))}
+                    </TableRow>
+                ))}
+            </TableBody>
+        </Table>
+    );
 }

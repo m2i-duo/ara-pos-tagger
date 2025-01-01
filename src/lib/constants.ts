@@ -1,5 +1,6 @@
 import {Locale, Model, ModelDetails} from "@/lib/types";
 
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1"
 export const APP_LOCALES : Locale[] = ["ar", "fr", "en"]
 
 export const LOGO = {

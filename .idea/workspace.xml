@@ -9,21 +9,16 @@
       <change beforePath="$PROJECT_DIR$/messages/ar/home-page.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/ar/home-page.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messages/en/home-page.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/en/home-page.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messages/fr/home-page.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/fr/home-page.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/input-zone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/input-zone.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/output-zone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/output-zone.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/settings-zone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/settings-zone.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/download-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/download-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/output-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/output-table.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/top-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/top-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/locale-toggler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locale-toggler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/theme-toggler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme-toggler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/tooltip-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/tooltip-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/navigation/header-nav-links.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/navigation/header-nav-links.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/pos-tagger-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/pos-tagger-context.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +62,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/add-state-management",
+    "git-widget-placeholder": "feature/add-api-integration",
     "last_opened_file_path": "/home/codeonym/WebstormProjects/ara-pos-tagger/messages/ar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -107,6 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1735592655629</updated>
       <workItem from="1735592656664" duration="6603000" />
+      <workItem from="1735735226151" duration="10357000" />
     </task>
     <servers />
   </component>
