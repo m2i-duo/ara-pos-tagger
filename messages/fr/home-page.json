@@ -1,6 +1,65 @@
 {
   "main": {
-    "title": "Page d'accueil",
-    "description": "Bienvenue sur la page d'accueil"
+    "header-nav-links": {
+      "about": "À propos",
+      "contact": "Contact",
+      "docs": "Documentation",
+      "special-mentions": "Mentions spéciales",
+      "source-code": "Code source"
+    },
+    "top-menu": {
+      "upload": {
+        "tooltip": "Téléchargez votre fichier"
+      },
+      "download": {
+        "title": "Télécharger le résultat",
+        "description": "Téléchargez votre fichier dans le format de votre choix",
+        "tooltip": "Téléchargez votre fichier",
+        "format": {
+          "csv": "Valeurs séparées par des virgules",
+          "json": "Notation Objet JavaScript",
+          "xml": "Langage de balisage extensible"
+        },
+        "action": {
+          "download": "Télécharger",
+          "cancel": "Annuler"
+        }
+      },
+      "language": {
+        "ar": "Arabe",
+        "en": "Anglais",
+        "fr": "Français"
+      },
+      "theme": {
+        "dark": "Sombre",
+        "light": "Clair",
+        "system": "Système"
+      }
+    },
+    "main-box": {
+      "input-zone": {
+        "label": "Phrase",
+        "placeholder": "Entrez votre phrase en arabe ici..."
+      },
+      "settings-zone": {
+        "model-select": "Sélectionnez le modèle que vous souhaitez utiliser",
+        "action": {
+          "analyze": "Analyser"
+        }
+      },
+      "output-zone": {
+        "title": "Résultat annoté",
+        "description": "Le résultat de l'analyse sera affiché ici",
+        "table": {
+          "header": {
+            "word": "Mot",
+            "arabic-tag": "Tag arabe",
+            "english-tag": "Tag anglais",
+            "french-tag": "Tag français",
+            "abbreviation": "Abréviation du tag"
+          }
+        }
+      }
+    }
   }
 }

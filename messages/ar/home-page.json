@@ -1,6 +1,65 @@
 {
   "main": {
-    "title": "الصفحة الرئيسية",
-    "description": "مرحبا بك في الصفحة الرئيسية"
+    "header-nav-links": {
+      "about": "حول",
+      "contact": "اتصال",
+      "docs": "مستندات",
+      "special-mentions": "إشارات خاصة",
+      "source-code": "الشفرة المصدرية"
+    },
+    "top-menu": {
+      "upload": {
+        "tooltip": "قم بتحميل ملفك"
+      },
+      "download": {
+        "title": "تنزيل الإخراج",
+        "description": "قم بتنزيل ملفك بالتنسيق الذي تختاره",
+        "tooltip": "قم بتنزيل ملفك",
+        "format": {
+          "csv": "قيم مفصولة بفواصل",
+          "json": "ترميز كائن جافاسكريبت",
+          "xml": "لغة التوصيف الموسعة"
+        },
+        "action": {
+          "download": "تنزيل",
+          "cancel": "إلغاء"
+        }
+      },
+      "language": {
+        "ar": "العربية",
+        "en": "الإنجليزية",
+        "fr": "الفرنسية"
+      },
+      "theme": {
+        "dark": "داكن",
+        "light": "فاتح",
+        "system": "النظام"
+      }
+    },
+    "main-box": {
+      "input-zone": {
+        "label": "الجملة",
+        "placeholder": "أدخل الجملة العربية هنا..."
+      },
+      "settings-zone": {
+        "model-select": "اختر النموذج الذي ترغب في استخدامه",
+        "action": {
+          "analyze": "تحليل"
+        }
+      },
+      "output-zone": {
+        "title": "الناتج الموسوم",
+        "description": "سيتم عرض نتائج التحليل هنا",
+        "table": {
+          "header": {
+            "word": "الكلمة",
+            "arabic-tag": "الوسم العربي",
+            "english-tag": "الوسم الإنجليزي",
+            "french-tag": "الوسم الفرنسي",
+            "abbreviation": "اختصار الوسم"
+          }
+        }
+      }
+    }
   }
 }

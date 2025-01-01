@@ -8,6 +8,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+import {useTranslations} from "next-intl";
 
 const sentence = [
     {
@@ -153,15 +154,16 @@ const sentence = [
 ]
 
 export function OutputTable() {
+    const t = useTranslations("main.main-box.output-zone.table");
     return (
         <Table style={{direction: "rtl"}}>
             <TableHeader>
                 <TableRow>
-                    <TableHead className={"text-start"}>Word</TableHead>
-                    <TableHead className={"text-start"}>Arabic Tag</TableHead>
-                    <TableHead className={"text-start"}>English Tag</TableHead>
-                    <TableHead className={"text-start"}>French Tag</TableHead>
-                    <TableHead className="text-end">Tag Abbreviation</TableHead>
+                    <TableHead className={"text-start"}>{t("header.word")}</TableHead>
+                    <TableHead className={"text-start"}>{t("header.arabic-tag")}</TableHead>
+                    <TableHead className={"text-start"}>{t("header.english-tag")}</TableHead>
+                    <TableHead className={"text-start"}>{t("header.french-tag")}</TableHead>
+                    <TableHead className="text-end">{t("header.abbreviation")}</TableHead>
                 </TableRow>
             </TableHeader>
             <TableBody>

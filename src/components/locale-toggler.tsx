@@ -10,10 +10,12 @@ import {
 import {useChangeLocale} from "@/hooks/use-change-locale";
 import {Languages} from "lucide-react";
 import * as React from "react";
+import {useLocale, useTranslations} from "next-intl";
 
 export function LocaleToggle() {
+    const t = useTranslations("main.top-menu");
     const { changeLocale } = useChangeLocale();
-
+    const locale = useLocale()
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -22,10 +24,10 @@ export function LocaleToggle() {
                     <span className="sr-only">Toggle theme</span>
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" style={{direction: locale === "ar" ? "rtl": "ltr"}}>
                 {APP_LOCALES.map((locale) => (
                     <DropdownMenuItem key={locale} onClick={() => changeLocale(locale)}>
-                        {locale.toUpperCase()}
+                        {t(`language.${locale}`)}
                     </DropdownMenuItem>
                 ))}
             </DropdownMenuContent>

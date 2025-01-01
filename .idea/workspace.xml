@@ -5,23 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7db2472f-89ce-484f-b8f4-0650ecb93ac1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/favicons/web-app-manifest-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/favicons/web-app-manifest-512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/logo/logo-full-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/logo/logo-full-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/apple-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages/ar/home-page.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/ar/home-page.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages/en/home-page.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/en/home-page.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages/fr/home-page.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/fr/home-page.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/input-zone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/input-zone.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/output-zone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/output-zone.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/settings-zone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/_resizable-box-components/settings-zone.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/download-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/download-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/output-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/output-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/_components/top-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/_components/top-menu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/locale-toggler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/locale-toggler.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/theme-toggler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme-toggler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/resizable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/resizable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i18n/routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/tooltip-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/tooltip-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/navigation/header-nav-links.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/navigation/header-nav-links.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/types.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +53,9 @@
     &quot;accountId&quot;: &quot;3bc24303-b8c3-4c22-9173-aae73162c487&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/app/[locale]/_components/download-menu.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -62,8 +67,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/add-main-ui-compoenents",
-    "last_opened_file_path": "/home/codeonym/WebstormProjects/ara-pos-tagger/public/assets/favicons",
+    "git-widget-placeholder": "feature/add-state-management",
+    "last_opened_file_path": "/home/codeonym/WebstormProjects/ara-pos-tagger/messages/ar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,11 +81,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/messages/ar" />
       <recent name="$PROJECT_DIR$/public/assets/favicons" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/public/assets/images/logo" />
       <recent name="$PROJECT_DIR$/messages/fr" />
-      <recent name="$PROJECT_DIR$/messages/en" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/[locale]" />

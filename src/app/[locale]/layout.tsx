@@ -7,6 +7,7 @@ import {notFound} from "next/navigation";
 import {routing} from "@/i18n/routing";
 import {getMessages} from 'next-intl/server';
 import {NextIntlClientProvider} from 'next-intl';
+import {PosTaggerProvider} from "@/context/pos-tagger-context";
 
 const geistSans = localFont({
     src: "../fonts/GeistVF.woff",
@@ -38,20 +39,25 @@ export default async function LocaleLayout({ children, params: {locale}}: { chil
             <title>ARAPT</title>
             <meta name="apple-mobile-web-app-title" content="ARAPT"/>
         </head>
-        <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+
         <NextIntlClientProvider messages={messages}>
+            <body
+                style={{direction: locale === "ar" ? "rtl" : "ltr"}}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            >
             <ThemeProvider
                 attribute="class"
                 defaultTheme="system"
                 enableSystem
                 disableTransitionOnChange
             >
-                {children}
+                <PosTaggerProvider>
+                    {children}
+                </PosTaggerProvider>
             </ThemeProvider>
+            </body>
         </NextIntlClientProvider>
-        </body>
         </html>
-    );
+    )
+        ;
 }
