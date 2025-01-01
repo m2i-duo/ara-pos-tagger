@@ -1,6 +1,65 @@
 {
   "main": {
-    "title": "Home Page",
-    "description": "Welcome to the home page"
+    "header-nav-links": {
+      "about": "About",
+      "contact": "Contact",
+      "docs": "Docs",
+      "special-mentions": "Special Mentions",
+      "source-code": "Source Code"
+    },
+    "top-menu": {
+      "upload": {
+        "tooltip": "Upload your file"
+      },
+      "download": {
+        "title": "Download output",
+        "description": "Download your file in the format of your choice",
+        "tooltip": "Download your file",
+        "format": {
+          "csv": "Comma Separated Values",
+          "json": "JavaScript Object Notation",
+          "xml": "Extensible Markup Language"
+        },
+        "action": {
+          "download": "Download",
+          "cancel": "Cancel"
+        }
+      },
+      "language": {
+        "ar": "Arabic",
+        "en": "English",
+        "fr": "French"
+      },
+      "theme": {
+        "dark": "Dark",
+        "light": "Light",
+        "system": "System"
+      }
+    },
+    "main-box": {
+      "input-zone": {
+        "label": "Sentence",
+        "placeholder": "Enter your arabic sentence here..."
+      },
+      "settings-zone": {
+        "model-select": "Select the model you wish to use",
+        "action": {
+          "analyze": "Analyze"
+        }
+      },
+      "output-zone": {
+        "title": "Tagged output",
+        "description": "The output of the analysis will be displayed here",
+        "table": {
+          "header": {
+            "word": "Word",
+            "arabic-tag": "Arabic Tag",
+            "english-tag": "English Tag",
+            "french-tag": "French Tag",
+            "abbreviation": "Tag Abbreviation"
+          }
+        }
+      }
+    }
   }
 }

@@ -5,13 +5,15 @@ import {ToolTipButton} from "@/components/ui/tooltip-button";
 import {DownloadMenu} from "@/app/[locale]/_components/download-menu";
 import {LocaleToggle} from "@/components/locale-toggler";
 import {ModeToggle} from "@/components/theme-toggler";
+import {useTranslations} from "next-intl";
 
 function TopMenu() {
+    const t = useTranslations("main.top-menu");
     return (
         <Suspense fallback={<Skeleton className="w-full h-24 sm:h-16" />}>
             <div className={"w-full h-24 sm:h-16 flex items-center justify-between shadow p-4"}>
                 <div className="flex items-center gap-2">
-                    <ToolTipButton tooltip={"Upload"}>
+                    <ToolTipButton tooltip={t("upload.tooltip")}>
                         <Upload className={"h-[1.2rem] w-[1.2rem]"}/>
                     </ToolTipButton>
                     <DownloadMenu />

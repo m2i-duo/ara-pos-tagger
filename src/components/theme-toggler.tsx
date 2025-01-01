@@ -11,10 +11,12 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import {useLocale, useTranslations} from "next-intl";
 
 export function ModeToggle() {
     const { setTheme } = useTheme()
-
+    const t = useTranslations("main.top-menu");
+    const locale = useLocale()
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -24,15 +26,15 @@ export function ModeToggle() {
                     <span className="sr-only">Toggle theme</span>
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" style={{direction: locale === "ar" ? "rtl": "ltr"}}>
                 <DropdownMenuItem onClick={() => setTheme("light")}>
-                    Light
+                    {t("theme.light")}
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme("dark")}>
-                    Dark
+                    {t("theme.dark")}
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme("system")}>
-                    System
+                    {t("theme.system")}
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

@@ -1,4 +1,4 @@
-import {Locale} from "@/lib/types";
+import {Locale, Model, ModelDetails} from "@/lib/types";
 
 export const APP_LOCALES : Locale[] = ["ar", "fr", "en"]
 
@@ -12,25 +12,20 @@ export const LOGO = {
     height: 40,
 }
 
-export const MODELS = {
-    "HMM-MODEL": {
+export const MODELS: Record<Model, ModelDetails> = {
+   "HMM" : {
         name: "HMM Model",
         description: "Hidden Markov Model",
         version: "1.0.0",
     },
-    "BiLSTM-MODEL": {
+    "BiLSTM": {
         name: "BiLSTM Model",
         description: "Bidirectional Long Short-Term Memory",
         version: "1.0.0",
     },
-    "BERT-MODEL": {
+    "BERT": {
         name: "BERT Model",
         description: "Bidirectional Encoder Representations from Transformers",
-        version: "1.0.0",
-    },
-    "ALKHALIL-MODEL": {
-        name: "AlKhalil Model",
-        description: "AlKhalil Model",
         version: "1.0.0",
     }
 }
